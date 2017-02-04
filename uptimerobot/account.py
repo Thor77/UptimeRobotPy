@@ -33,7 +33,7 @@ class Account(object):
         :rtype: [uptimerobot.Monitor]
         '''
         return [
-            Monitor(self, **monitor) for monitor in
+            Monitor(self, monitor) for monitor in
             self._request('getMonitors')['monitors']
         ]
 
@@ -46,6 +46,6 @@ class Account(object):
         :rtype: [uptimerobot.AlertContact]
         '''
         return [
-            AlertContact(self, **alert_contact) for alert_contact in
+            AlertContact(self, alert_contact) for alert_contact in
             self._request('getAlertContacts')['alert_contacts']
         ]

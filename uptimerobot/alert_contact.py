@@ -3,6 +3,6 @@ from .utrobject import UptimeRobotObject
 
 
 class AlertContact(UptimeRobotObject):
-    def __init__(self, account, **kwargs):
-        super().__init__(account, **kwargs)
+    def __init__(self, account, attributes):
+        super().__init__(account, attributes)
         self.status = AlertContactStatus(self.status)
