@@ -1,11 +1,8 @@
-from .tools import setattrs
 from .status import AlertContactStatus
+from .utrobject import UptimeRobotObject
 
 
-class AlertContact(object):
+class AlertContact(UptimeRobotObject):
     def __init__(self, **kwargs):
-        setattrs(self, kwargs)
+        super().__init__(**kwargs)
         self.status = AlertContactStatus(self.status)
-
-    def __repr__(self):
-        return '{0.friendly_name} ({0.id}) <{0.status}>'.format(self)
