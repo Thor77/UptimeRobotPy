@@ -2,7 +2,8 @@ from .tools import setattrs
 
 
 class UptimeRobotObject(object):
-    def __init__(self, **kwargs):
+    def __init__(self, account, **kwargs):
+        self.account = account
         setattrs(self, kwargs)
 
     def __repr__(self):
