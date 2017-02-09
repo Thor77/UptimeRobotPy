@@ -2,7 +2,7 @@ from setuptools import setup
 
 setup(
     name='UptimeRobotPy',
-    version='0.2.0',
+    version='0.2.1',
     author='Thor77',
     author_email='thor77@thor77.org',
     description='Pythonic  API-Interface for UptimeRobot',
